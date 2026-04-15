@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mptt',
-    'comment_app',
+    'comments_app',
     'rest_framework'
 ]
 
