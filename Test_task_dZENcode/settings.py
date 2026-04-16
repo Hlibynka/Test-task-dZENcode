@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'mptt',
     'comments_app',
-    'rest_framework'
+    'rest_framework',
+    'captcha'
 ]
 
 MIDDLEWARE = [
