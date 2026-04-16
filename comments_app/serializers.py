@@ -16,7 +16,7 @@ class CommentSerializer(serializers.ModelSerializer):
     def get_replies(self, obj):
         children = obj.get_children()
         if children.exists():
-            return CommentSerializer(children, many=True).data
+            return CommentSerializer(children, many=True, context=self.context).data
         return []
 
     def validate_text(self, value):
