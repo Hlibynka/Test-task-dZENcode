@@ -11,7 +11,7 @@ const currentPage = ref(1)
 const totalPages = ref(1)
 const ordering = ref('-created_at')
 
-const highlightedCommentId = ref(null) // Змінна для підсвічування
+const highlightedCommentId = ref(null)
 let socket = null
 
 // Background loading

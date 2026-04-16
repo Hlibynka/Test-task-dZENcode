@@ -96,14 +96,14 @@ const toggleLightbox = () => {
 .reply-form-wrapper { margin-top: 15px; }
 .replies { margin-left: 30px; border-left: 2px solid #eee; padding-left: 15px; }
 
-/* Стилі модального вікна */
+/* modal window style */
 .lightbox-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.8); display: flex; justify-content: center; align-items: center; z-index: 1000; }
 .lightbox-content { position: relative; max-width: 90%; max-height: 90%; }
 .lightbox-image { max-width: 100%; max-height: 90vh; border: 3px solid #fff; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
 .close-btn { position: absolute; top: -15px; right: -15px; background: #f44336; color: white; border: none; border-radius: 50%; width: 30px; height: 30px; font-size: 20px; line-height: 28px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
 .close-btn:hover { background: #d32f2f; }
 
-/* Анімація підсвічування */
+/* highlight animation */
 .highlight-anim { animation: highlightFade 3s ease-out; }
 @keyframes highlightFade {
   0% { background-color: #e8f5e9; border-color: #4CAF50; box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); }

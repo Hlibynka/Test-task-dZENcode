@@ -6,13 +6,13 @@ django_asgi_app = get_asgi_application()
 
 from channels.routing import ProtocolTypeRouter, URLRouter
 from channels.auth import AuthMiddlewareStack
-import comments_app.routing # <--- Перевір назву твого додатка тут!
+import comments_app.routing
 
 application = ProtocolTypeRouter({
     "http": django_asgi_app,
     "websocket": AuthMiddlewareStack(
         URLRouter(
-            comments_app.routing.websocket_urlpatterns # <--- І тут!
+            comments_app.routing.websocket_urlpatterns
         )
     ),
 })
