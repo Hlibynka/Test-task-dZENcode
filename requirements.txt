@@ -2,7 +2,13 @@ Django>=6.0.4
 djangorestframework>=3.17.0
 django-mptt>=0.14
 django-cors-headers>=4.3.0
-django-simple-captcha==0.6.0
+django-simple-captcha>=0.6.0
 Pillow>=10.0.0
 psycopg2-binary>=2.9
 bleach>=6.1.0
+redis>=5.0.3
+django-redis>=5.4.0
+celery>=5.3.6
+channels==4.0.0
+daphne==4.0.0
+channels-redis==4.1.0
