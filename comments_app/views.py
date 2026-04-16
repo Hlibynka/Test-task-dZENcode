@@ -4,6 +4,7 @@ from django.core.cache import cache
 from .tasks import process_new_comment_task
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework import status
 from captcha.models import CaptchaStore
 from captcha.helpers import captcha_image_url
@@ -37,6 +38,7 @@ class CommentViewSet(viewsets.ModelViewSet):
     filter_backends = [OrderingFilter]
     ordering_fields = ['user_name', 'email', 'created_at']
     ordering = ['-created_at']
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     @method_decorator(cache_page(60))
     def dispatch(self, request, *args, **kwargs):
